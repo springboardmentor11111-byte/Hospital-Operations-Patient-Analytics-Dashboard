@@ -1,0 +1,110 @@
+# MedTrack DV – Milestone 3: Dashboard Development
+
+## Overview
+
+Milestone 3 focuses on transforming the KPI-enriched hospital dataset and dashboard prototype developed during Milestone 2 into a complete, interactive Tableau dashboard solution.
+
+The milestone consists of four integrated dashboards:
+
+1. Hospital Overview
+2. Patient Flow
+3. Department Analytics
+4. Resource Utilization
+
+## Objectives
+
+* Build the planned Tableau visualizations using real hospital data.
+* Implement KPI scorecards and analytical charts.
+* Create interactive filters and dashboard navigation.
+* Implement dashboard actions and parameter-based filtering.
+* Integrate all dashboards into a single Tableau workbook.
+* Validate dashboard results against the KPI calculations from Milestone 2.
+
+## Dashboard 1 – Hospital Overview
+
+The Hospital Overview dashboard presents the major hospital KPIs:
+
+* Total Admissions
+* Occupancy Rate
+* Average Length of Stay
+* Readmission Rate
+* Bed Utilization Rate
+
+It also contains monthly admission, occupancy and readmission trends.
+
+## Dashboard 2 – Patient Flow
+
+The Patient Flow dashboard analyzes the movement of patients through the hospital.
+
+Key visualizations include:
+
+* Admissions vs Discharges
+* Average Length of Stay by Department
+* Peak Patient Load
+* Monthly patient flow trends
+
+The dashboard helps identify periods of high patient demand and compare admissions with discharges.
+
+## Dashboard 3 – Department Analytics
+
+The Department Analytics dashboard compares departments based on:
+
+* Patient Volume
+* Readmission Rate
+* Efficiency Score
+* Treatment Capacity
+
+Departments can be ranked and compared to identify high-demand and underperforming areas.
+
+## Dashboard 4 – Resource Utilization
+
+The Resource Utilization dashboard evaluates the use of hospital resources:
+
+* Bed Utilization
+* Staff Allocation
+* Equipment Utilization
+* Spare Capacity
+
+This dashboard supports resource and capacity planning.
+
+## Interactive Features
+
+The final Tableau workbook includes:
+
+* Global filters
+* Hospital filter
+* Department filter
+* Region filter
+* Date filter
+* Dashboard navigation buttons
+* Parameter actions
+* Cross-dashboard filtering
+
+## Final Deliverables
+
+### Interim Workbook
+
+`medtrack_dashboard_v1.twbx`
+
+Contains the completed Hospital Overview and Patient Flow dashboards after Module 5.
+
+### Final Workbook
+
+`MedTrack_DV.twbx`
+
+Contains all four dashboards with integrated filters, navigation and dashboard actions.
+
+## Validation
+
+The final dashboard is tested to confirm:
+
+* All worksheets display correctly.
+* KPI values match Milestone 2 calculations.
+* Global filters update all dashboards.
+* Navigation buttons work correctly.
+* Dashboard actions correctly filter the target dashboard.
+* The packaged Tableau workbook opens successfully with its required data.
+
+## Milestone 3 Outcome
+
+Milestone 3 delivers a complete, interactive Hospital Operations and Patient Analytics Dashboard that combines hospital KPIs, patient-flow analysis, department performance and resource utilization into one integrated Tableau workbook.
