@@ -1,0 +1,162 @@
+# 🧪 Testing & Validation
+
+Testing and validation were performed to ensure that the MedTrack DV dashboards are **accurate, consistent, functional, interactive, and visually reliable**.
+
+The testing process covered the Tableau workbooks, KPI calculations, filters, dashboard interactions, charts, navigation, formatting, and overall layout.
+
+## Testing Objectives
+
+The main objectives of testing were to:
+
+* Verify the accuracy of calculated KPIs.
+* Ensure consistency between the source dataset and dashboard.
+* Validate dashboard filters and interactions.
+* Verify that all charts display the expected results.
+* Check dashboard navigation functionality.
+* Validate number and percentage formatting.
+* Ensure the dashboard layout is clear and consistent.
+* Confirm that the Tableau workbooks load correctly.
+
+## Validation Areas
+
+| Test ID | Validation Area        | Test Description                         | Expected Result                         | Status |
+| ------- | ---------------------- | ---------------------------------------- | --------------------------------------- | ------ |
+| TC-01   | Workbook Loading       | Open the Tableau workbook                | Workbook loads without errors           | ✅ Pass |
+| TC-02   | Data Connection        | Verify connection to the final dataset   | Dataset connects successfully           | ✅ Pass |
+| TC-03   | Total Admissions       | Compare dashboard value with source data | Values match                            | ✅ Pass |
+| TC-04   | Total Discharges       | Compare dashboard value with source data | Values match                            | ✅ Pass |
+| TC-05   | Occupancy Rate         | Validate calculated occupancy percentage | Calculation is correct                  | ✅ Pass |
+| TC-06   | Average Length of Stay | Verify average stay calculation          | Calculation is correct                  | ✅ Pass |
+| TC-07   | Readmission Rate       | Validate readmission calculation         | Calculation is correct                  | ✅ Pass |
+| TC-08   | Date Filter            | Apply different date ranges              | Dashboard updates correctly             | ✅ Pass |
+| TC-09   | Department Filter      | Select individual departments            | Relevant visuals update                 | ✅ Pass |
+| TC-10   | Ward Filter            | Select individual wards                  | Relevant visuals update                 | ✅ Pass |
+| TC-11   | Chart Functionality    | Check dashboard charts                   | Charts display correctly                | ✅ Pass |
+| TC-12   | Dashboard Navigation   | Navigate between dashboards              | Navigation works correctly              | ✅ Pass |
+| TC-13   | KPI Interaction        | Apply filters to KPI cards               | KPI values update correctly             | ✅ Pass |
+| TC-14   | Number Formatting      | Check numeric values                     | Values are clearly formatted            | ✅ Pass |
+| TC-15   | Percentage Formatting  | Check percentage KPIs                    | Percentages display correctly           | ✅ Pass |
+| TC-16   | Visual Layout          | Check alignment and spacing              | Layout is consistent                    | ✅ Pass |
+| TC-17   | Data Consistency       | Compare dashboard with final dataset     | No unexpected discrepancies             | ✅ Pass |
+| TC-18   | Overall Usability      | Review dashboard interaction             | Dashboard is easy to understand and use | ✅ Pass |
+
+## 🧮 KPI Validation
+
+The major KPIs were validated against the prepared hospital dataset.
+
+### Total Admissions
+
+The total number of admissions displayed on the dashboard was compared with the corresponding records in the final dataset.
+
+**Validation Result:** ✅ Passed
+
+### Total Discharges
+
+The dashboard discharge count was compared with the source dataset.
+
+**Validation Result:** ✅ Passed
+
+### Occupancy Rate
+
+The occupancy calculation was checked to ensure that the dashboard displayed the expected percentage based on the available hospital data.
+
+**Validation Result:** ✅ Passed
+
+### Average Length of Stay
+
+The average patient stay was validated using the relevant admission and discharge information.
+
+**Validation Result:** ✅ Passed
+
+### Readmission Rate
+
+The readmission calculation was checked against the defined readmission logic used during KPI engineering.
+
+**Validation Result:** ✅ Passed
+
+## 🔍 Filter Testing
+
+The following interactive filters were tested:
+
+* Date
+* Department
+* Ward
+
+Each filter was applied individually and in combination to confirm that the relevant dashboard components updated correctly.
+
+**Result:** ✅ All tested filters functioned as expected.
+
+## 📊 Visualization Testing
+
+All dashboard visualizations were checked for:
+
+* Correct data representation
+* Appropriate chart type
+* Correct axis labels
+* Correct titles
+* Accurate values
+* Proper legends
+* Readability
+* Consistent formatting
+
+**Result:** ✅ Passed
+
+## 🧭 Dashboard Navigation Testing
+
+Navigation between the following dashboards was tested:
+
+1. Hospital Overview
+2. Patient Flow
+3. Department Analytics
+4. Resource Utilization
+
+**Result:** ✅ Dashboard navigation works as expected.
+
+## 🎨 UI & Formatting Validation
+
+The dashboard interface was reviewed for:
+
+* Consistent layout
+* Proper alignment
+* Readable text
+* Appropriate spacing
+* KPI card visibility
+* Chart readability
+* Number formatting
+* Percentage formatting
+* Filter placement
+* Overall visual consistency
+
+**Result:** ✅ Passed
+
+## 📝 Testing Summary
+
+| Category           | Result   |
+| ------------------ | -------- |
+| Workbook Loading   | ✅ Passed |
+| Data Validation    | ✅ Passed |
+| KPI Validation     | ✅ Passed |
+| Filter Testing     | ✅ Passed |
+| Chart Testing      | ✅ Passed |
+| Navigation Testing | ✅ Passed |
+| Formatting Testing | ✅ Passed |
+| Visual Validation  | ✅ Passed |
+| Usability Testing  | ✅ Passed |
+
+## 📄 Detailed Testing Documentation
+
+The complete testing and validation documentation is available at:
+
+```text
+milestone_3/
+└── validation/
+    └── dashboard_testing.md
+```
+
+## ✅ Final Validation Status
+
+**Overall Testing Status: PASSED**
+
+The MedTrack DV dashboards were successfully tested and validated for **data accuracy, KPI correctness, filtering, visualization, navigation, formatting, and usability**.
+
+The dashboards are considered ready for **final review and evaluation**.
