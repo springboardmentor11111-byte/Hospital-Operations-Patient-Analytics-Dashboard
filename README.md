@@ -1,77 +1,376 @@
-# MedTrack DV — Hospital Operations & Patient Analytics Dashboard
+# MedTrack DV – Hospital Operations & Patient Analytics Dashboard
 
-A 4-page Power BI dashboard suite for hospital administrators — admissions, patient flow,
-department efficiency, and resource utilization, built on 61,619 patient admission records.
+> **A Tableau-based healthcare analytics dashboard for monitoring hospital operations, patient flow, department performance, and resource utilization.**
 
-## Repository Structure
+---
 
+## 📌 Project Overview
+
+**MedTrack DV** is a hospital operations and patient analytics project developed to transform hospital data into meaningful, interactive visual insights.
+
+The project follows an end-to-end data analytics workflow:
+
+**Data Collection → Data Cleaning → KPI Engineering → Dashboard Planning → Tableau Development → Testing & Validation**
+
+The final solution provides interactive dashboards that help analyze hospital admissions, discharges, patient flow, department performance, and resource utilization.
+
+---
+
+## 🎯 Objectives
+
+The primary objectives of the MedTrack DV project are to:
+
+* Collect and prepare hospital operational data.
+* Clean and validate the dataset for analysis.
+* Engineer meaningful healthcare KPIs.
+* Design an effective dashboard structure.
+* Develop interactive Tableau dashboards.
+* Analyze patient flow and hospital operations.
+* Provide department-level insights.
+* Monitor resource utilization.
+* Validate dashboard accuracy and functionality.
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology           | Purpose                                 |
+| -------------------- | --------------------------------------- |
+| **Python**           | Data processing and KPI engineering     |
+| **Pandas**           | Data cleaning and transformation        |
+| **Jupyter Notebook** | Data analysis and preprocessing         |
+| **Microsoft Excel**  | Dataset storage and validation          |
+| **Tableau**          | Dashboard development and visualization |
+| **Git & GitHub**     | Version control and project management  |
+| **Markdown**         | Project documentation                   |
+
+---
+
+# 📊 Project Milestones
+
+## Milestone 1 – Data Collection & Preparation
+
+### Completed Activities
+
+* Collected and organized the hospital dataset.
+* Added the raw hospital dataset.
+* Cleaned and transformed the data.
+* Handled missing and inconsistent values.
+* Prepared the final dataset for visualization.
+* Created data collection and cleaning scripts.
+* Validated the prepared dataset.
+
+### Deliverables
+
+```text
+data/
+├── hospital_raw_data.csv
+├── hospital_cleaned.csv
+└── hospital_final_dataset.xlsx
+
+scripts/
+├── data_collection.py
+└── hospital_cleaning.ipynb
 ```
-MedTrack_DV/
-├── scripts/
-│   ├── hospital_cleaning.ipynb
-│   └── hospital_cleaning_extended.ipynb
+
+---
+
+# Milestone 2 – KPI Engineering & Dashboard Planning
+
+## KPI Engineering
+
+Hospital operational KPIs were defined and prepared for dashboard implementation.
+
+### Key Performance Indicators
+
+| KPI                        | Description                                                 |
+| -------------------------- | ----------------------------------------------------------- |
+| **Total Admissions**       | Total number of patient admissions                          |
+| **Total Discharges**       | Total number of patients discharged                         |
+| **Occupancy Rate**         | Percentage of available hospital capacity utilized          |
+| **Average Length of Stay** | Average duration of patient hospitalization                 |
+| **Readmission Rate**       | Percentage of patients readmitted within the defined period |
+
+### Dashboard Planning
+
+The dashboard structure was planned using:
+
+* Dashboard storyboard
+* KPI documentation
+* Wireframe/prototype
+* Visualization planning
+* User interaction planning
+
+### Deliverables
+
+```text
+milestone_2/
+├── medtrack_prototype.twbx
+├── dashboard_storyboard.pdf
+└── KPI_documentation.md
+```
+
+---
+
+# Milestone 3 – Dashboard Development
+
+The final Tableau dashboards were developed based on the KPI requirements and dashboard prototype.
+
+## 📈 Developed Dashboards
+
+### 1. Hospital Overview
+
+Provides a high-level view of hospital performance through:
+
+* KPI cards
+* Admissions
+* Discharges
+* Occupancy
+* Average Length of Stay
+* Readmission analysis
+* Interactive filters
+
+### 2. Patient Flow
+
+Focuses on patient movement and hospital activity.
+
+Includes:
+
+* Admission trends
+* Discharge trends
+* Patient flow analysis
+* Time-based trends
+* Interactive filtering
+
+### 3. Department Analytics
+
+Provides department-level analysis of hospital operations.
+
+Includes:
+
+* Department-wise admissions
+* Department performance
+* Patient distribution
+* Comparative analysis
+* Department filters
+
+### 4. Resource Utilization
+
+Analyzes hospital resource usage.
+
+Includes:
+
+* Ward-level analysis
+* Resource utilization
+* Occupancy trends
+* Utilization comparisons
+* Interactive filtering
+
+---
+
+## 🎨 Dashboard Features
+
+The MedTrack DV dashboards provide:
+
+* 📌 KPI cards
+* 📊 Interactive charts
+* 🔎 Dynamic filters
+* 📅 Date-based filtering
+* 🏥 Department filtering
+* 🛏️ Ward-level filtering
+* 📈 Trend analysis
+* 🔄 Dashboard navigation
+* 📋 Data-driven insights
+* 📐 Consistent number and percentage formatting
+
+---
+
+# 🧪 Testing & Validation
+
+The developed dashboards were tested to ensure accuracy, consistency, functionality, and usability.
+
+### Testing Areas
+
+| Test Area             | Validation                                      |
+| --------------------- | ----------------------------------------------- |
+| Tableau Workbook      | Workbook opens and loads correctly              |
+| KPI Accuracy          | KPI values verified against source data         |
+| Data Consistency      | Dashboard values match prepared dataset         |
+| Date Filters          | Date filtering works correctly                  |
+| Department Filters    | Department filtering works correctly            |
+| Ward Filters          | Ward filtering works correctly                  |
+| Dashboard Interaction | Interactive elements function correctly         |
+| Navigation            | Dashboard navigation works correctly            |
+| Charts                | Visualizations display correctly                |
+| Formatting            | Numbers and percentages are formatted correctly |
+| Layout                | Dashboard elements are properly aligned         |
+
+### Testing Documentation
+
+Detailed testing and validation information is available at:
+
+```text
+milestone_3/validation/dashboard_testing.md
+```
+
+---
+
+# 📸 Dashboard Screenshots
+
+Screenshots of the completed dashboards are available in:
+
+```text
+milestone_3/screenshots/
+```
+
+### Available Screenshots
+
+* `hospital_overview.png`
+* `patient_flow.png`
+* `department_analytics.png`
+* `resource_utilization.png`
+
+---
+
+# 📁 Project Structure
+
+```text
+MedTrack-DV/
+│
+├── README.md
+│
 ├── data/
-│   ├── raw/
-│   │   ├── hospital_raw_data.csv
-│   │   └── hospital_department_resources_raw.csv
-│   └── cleaned/
-│       ├── hospital_admissions_dataset.csv
-│       ├── hospital_department_resources.csv
-│       └── hospital_cleaned_extended.csv
-├── dashboard/
-│   ├── MedTrack_DV.pbix
-│   ├── MedTrack_DV_Theme_HighContrast.json
-│   └── assets/
-│       ├── medtrack_dv_logo_full.png
-│       ├── medtrack_dv_logo_badge_dark.png
-│       ├── medtrack_dv_logo_badge_light.png
-│       ├── kpi_icon_total_admissions.png
-│       ├── kpi_icon_occupancy_rate.png
-│       ├── kpi_icon_avg_length_of_stay.png
-│       ├── kpi_icon_readmission_rate.png
-│       ├── kpi_icon_bed_utilization_rate.png
-│       └── kpi_icon_discharge_count.png
-├── docs/
-│   ├── MedTrack_DV_Build_Guide.md
-│   ├── MedTrack_DV_Presentation.pptx
-│   ├── MedTrack_DV_Live_Demo_Script.md
-│   └── QA_Checklist.md
-└── README.md
+│   ├── hospital_raw_data.csv
+│   ├── hospital_cleaned.csv
+│   └── hospital_final_dataset.xlsx
+│
+├── scripts/
+│   ├── data_collection.py
+│   ├── hospital_cleaning.ipynb
+│   └── generate_hospital_kpis.py
+│
+├── milestone_2/
+│   ├── medtrack_prototype.twbx
+│   ├── dashboard_storyboard.pdf
+│   └── KPI_documentation.md
+│
+├── milestone_3/
+│   │
+│   ├── dashboard/
+│   │   ├── MedTrack_DV.twbx
+│   │   └── medtrack_dashboard_v1.twbx
+│   │
+│   ├── screenshots/
+│   │   ├── hospital_overview.png
+│   │   ├── patient_flow.png
+│   │   ├── department_analytics.png
+│   │   └── resource_utilization.png
+│   │
+│   ├── documentation/
+│   │   └── milestone_3_overview.md
+│   │
+│   └── validation/
+│       └── dashboard_testing.md
+│
+└── docs/
+    └── Milestone_3_Dashboard_Development_DETAILED.pdf
 ```
 
-## What goes where, and why
+---
 
-### `/scripts` — the cleaning pipeline
-- **`hospital_cleaning.ipynb`** — cleans the original raw admissions export (fixes mixed
-  date formats, inconsistent text casing, mixed boolean encodings, duplicate rows).
-- **`hospital_cleaning_extended.ipynb`** — the full pipeline: cleans admissions **and**
-  the staffing/equipment resource data, then merges both into the final analysis-ready
-  dataset. This is the one to point to if asked "show me your data cleaning process."
+# 🔄 Project Workflow
 
-### `/data` — every dataset, raw and cleaned, kept separate
-- **`raw/`** — the messy source files, kept exactly as "received" (with mixed formats,
-  typos, duplicates) so the cleaning notebooks have something real to run against.
-- **`cleaned/`** — the outputs. `hospital_cleaned_extended.csv` is the one that actually
-  feeds the dashboard (it has the merged Staff_Count/Equipment_Count columns); the other
-  two are intermediate/reference outputs.
+```text
+┌──────────────────────────────┐
+│ Milestone 1                  │
+│ Data Collection & Cleaning   │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│ Milestone 2                  │
+│ KPI Engineering & Planning  │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│ Milestone 3                  │
+│ Tableau Dashboard Development│
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│ Testing & Validation         │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│ Final MedTrack DV Dashboard  │
+└──────────────────────────────┘
+```
 
-### `/dashboard` — the Power BI deliverable itself
-- **`MedTrack_DV.pbix`** — save your Power BI file here with this name before committing.
-- **`MedTrack_DV_Theme_HighContrast.json`** — the custom dark theme, so anyone rebuilding
-  the report gets the exact same color palette without you having to redo it.
-- **`assets/`** — every logo and icon used inside the report.
+---
 
-### `/docs` — everything for presenting and reviewing the project
-- **Build Guide** — the field-mapping and DAX-measure reference.
-- **Presentation** — your PPT for the panel overview.
-- **Live Demo Script** — narration for the live walkthrough.
-- **QA Checklist** — see below, worth adding since your milestone doc explicitly asks for one.
+# 📦 Deliverables
 
-## Setup / Reproduction Steps
-1. Open `dashboard/MedTrack_DV.pbix` in Power BI Desktop.
-2. If reconnecting the data source: point it at `data/cleaned/hospital_cleaned_extended.csv`.
-3. To regenerate the cleaned data from scratch: open `scripts/hospital_cleaning_extended.ipynb`
-   in Google Colab, upload the two files from `data/raw/`, and run all cells.
+The project includes the following deliverables:
 
-## Tools Used
-Power BI Desktop · DAX · Power Query (M) · Python (pandas) · Google Colab
+### Data
+
+* Raw hospital dataset
+* Cleaned hospital dataset
+* Final analysis-ready dataset
+
+### Data Processing
+
+* Data collection script
+* Data cleaning notebook
+* KPI engineering script
+
+### Dashboard Planning
+
+* KPI documentation
+* Dashboard storyboard
+* Tableau prototype
+
+### Dashboard Development
+
+* Final Tableau workbook
+* Dashboard version 1 workbook
+* Dashboard screenshots
+
+### Documentation
+
+* Milestone documentation
+* Testing and validation documentation
+* Detailed project report
+
+---
+
+# ✅ Project Completion Status
+
+| Milestone                                          | Status      |
+| -------------------------------------------------- | ----------- |
+| Milestone 1 – Data Collection & Preparation        | ✅ Completed |
+| Milestone 2 – KPI Engineering & Dashboard Planning | ✅ Completed |
+| Milestone 3 – Dashboard Development                | ✅ Completed |
+| Testing & Validation                               | ✅ Completed |
+| Documentation                                      | ✅ Completed |
+| Final Deliverables                                 | ✅ Ready     |
+
+---
+
+# 🚀 Final Status
+
+**MedTrack DV – Hospital Operations & Patient Analytics Dashboard**
+
+The project has successfully completed **Milestones 1, 2, and 3**, including data preparation, KPI engineering, dashboard planning, Tableau development, testing, and validation.
+
+The final project is **ready for review, evaluation, and merge**.
+
+---
+
+## 👩‍💻 Project
+
+**Project:** MedTrack DV – Hospital Operations & Patient Analytics Dashboard
+**Domain:** Healthcare Analytics / Data Visualization
+**Tools:** Python, Pandas, Jupyter Notebook, Excel, Tableau
+**Platform:** GitHub
+
+---
