@@ -114,15 +114,49 @@ Full detail: see `Dashboard_Testing_Report.md` and `QA_Checklist.md`.
 
 ---
 
-## 7. Repository Contents
+## 7. Repository Structure
 
-| File | Description |
-|---|---|
-| `MedTrack_DV.twb` | Tableau workbook source file |
-| `MedTrack-DV_ppt1.pptx` | Dashboard presentation deck |
-| `dashboard_storyboard.pdf` | Storyboard / wireframe reference for all 4 pages |
-| `Dashboard_Testing_Report.md` | Full issue log and resolution detail |
-| `QA_Checklist.md` | Full QA test matrix and sign-off |
+```
+MedTrack-DV/
+├── dashboard/
+│   ├── MedTrack_DV.twb Files/        # Tableau workbook support files
+│   ├── MedTrack_DV.twb               # Tableau workbook source*
+│   ├── medtrack_prototype.twbx       # Packaged Tableau workbook (prototype)
+│   ├── MedTrack-DV ppt1.pptx         # Dashboard presentation deck*
+│   └── dashboard_storyboard.pdf      # Storyboard / wireframe reference*
+│
+├── data/
+│   ├── raw/                          # Source EHR extracts (pre-cleaning)
+│   │   ├── admission.csv
+│   │   ├── bed.csv
+│   │   ├── billing.csv
+│   │   ├── billing_detail.csv
+│   │   ├── department.csv
+│   │   ├── diagnostic_test.csv
+│   │   ├── disease.csv
+│   │   ├── doctor.csv
+│   │   ├── hospital_operational_data.csv
+│   │   ├── insurance_provider.csv
+│   │   ├── patient.csv
+│   │   ├── patient_admissions_data.csv
+│   │   ├── patient_diagnostic.csv
+│   │   ├── patient_insurance.csv
+│   │   └── ward.csv
+│   └── processed/                    # Cleaned, analysis-ready datasets
+│       ├── hospital_cleaned.csv
+│       └── hospital_final_dataset.xlsx
+│
+├── docs/
+│   ├── Dashboard_Testing_Report.md   # Full issue log and resolution detail*
+│   └── QA_Checklist.md               # Full QA test matrix and sign-off*
+│
+└── scripts/
+    ├── data_collection.ipynb         # Raw data collection/ingestion
+    ├── hospital_cleaning.ipynb       # Cleaning & validation pipeline
+    ├── generate_hospital_kpis.ipynb  # KPI computation for dashboard feed
+    └── medtrack_executive_briefing.pdf  # Executive summary output
+```
+*\* referenced/uploaded as part of this documentation set*
 
 ---
 
