@@ -1,4 +1,4 @@
-# Dashboard Testing Report
+# KPI Definitions
 
 ## Project
 
@@ -6,113 +6,136 @@
 
 ## Objective
 
-The purpose of testing was to check whether the Power BI dashboards, KPIs, filters, charts, and navigation were working correctly.
+The purpose of this document is to define the key performance indicators used in the Power BI dashboards.
 
-## Dashboards Tested
+## KPIs Used
 
-1. Hospital Overview
-2. Patient Flow
-3. Department Analytics
-4. Resource Utilization
+### 1. Total Admissions
 
-## Testing Performed
+**Definition:**
+Shows the total number of unique hospital admissions.
 
-### KPI Testing
+**DAX Formula:**
 
-The KPI values were checked against the prepared hospital data.
+```DAX
+Total Admissions =
+DISTINCTCOUNT(Hospital[Admission_ID])
+```
 
-The following metrics were checked:
+**Used In:**
 
-* Total Admissions
-* Average Length of Stay
-* Occupancy Rate
-* Total Revenue
-* Total Discharges
-* Long Stay %
-* Total Beds
-* Occupied Beds
-* Available Beds
+* Hospital Overview
+* Department Analytics
 
-### Filter Testing
+### 2. Average Length of Stay
 
-The dashboard filters and slicers were tested to verify that the connected visuals changed according to the selected values.
+**Definition:**
+Shows the average number of days patients stayed in the hospital.
 
-Filters tested included:
+**Used In:**
 
-* Department
-* Diagnosis
-* Admission Date
-* Gender
-* Ward
-* Bed Type
-* Floor
+* Hospital Overview
+* Department Analytics
 
-### Navigation Testing
+### 3. Occupancy Rate
 
-Dashboard navigation was checked to ensure that the navigation buttons moved to the correct dashboard pages.
+**Definition:**
+Shows the percentage of hospital bed capacity being utilized.
 
-### Chart Testing
+**Used In:**
 
-The dashboard charts were checked to verify that:
+* Hospital Overview
+* Department Analytics
 
-* Charts displayed the correct data
-* Chart values changed with filters
-* Chart titles and labels were clear
-* Visuals responded correctly to user selections
+### 4. Total Revenue
 
-### Patient Flow Testing
+**Definition:**
+Shows the total billing amount recorded in the hospital data.
 
-The Patient Flow dashboard was checked for:
+**DAX Formula:**
 
-* Admissions trend
-* Discharge trend
-* Length of Stay
-* Weekend vs Weekday admissions
-* Total Discharges
-* Long Stay %
+```DAX
+Total Revenue =
+SUM(Hospital[Total])
+```
 
-### Hospital Overview Testing
+**Used In:**
 
-The Hospital Overview dashboard was checked for:
+* Hospital Overview
+* Department Analytics
 
-* Total Admissions
-* Average Length of Stay
-* Occupancy Rate
-* Total Revenue
-* Monthly Admissions Trend
-* Admissions by Department
-* Diagnosis Distribution
-* Department Revenue
+### 5. Total Discharges
 
-### Department Analytics Testing
+**Definition:**
+Shows the number of records with a recorded discharge date.
 
-The Department Analytics dashboard was checked for:
+**DAX Formula:**
 
-* Total Admissions
-* Average Length of Stay
-* Occupancy Rate
-* Total Revenue
-* Patient Volume by Department
-* Revenue by Department
-* Stay Profile by Department
+```DAX
+Total Discharges =
+COUNT(Hospital[Discharge_Date])
+```
 
-### Resource Utilization Testing
+**Used In:**
 
-The Resource Utilization dashboard was checked for:
+* Patient Flow
 
-* Total Beds
-* Occupied Beds
-* Available Beds
-* Department Resource Matrix
-* Doctors by Department
-* Department, Ward, Bed Type, and Floor filters
+### 6. Long Stay %
 
-## Testing Result
+**Definition:**
+Shows the percentage of patients classified as having a long hospital stay.
 
-The dashboards were tested for KPI accuracy, filters, navigation, charts, and interactions.
+**Stay Categories:**
 
-Issues identified during development and dashboard improvement were corrected and checked again.
+* **Short:** 1–3 days
+* **Medium:** 4–7 days
+* **Long:** More than 7 days
+
+**Used In:**
+
+* Patient Flow
+
+### 7. Total Beds
+
+**Definition:**
+Shows the total number of hospital beds included in the resource data.
+
+**Used In:**
+
+* Resource Utilization
+
+### 8. Occupied Beds
+
+**Definition:**
+Shows the number of hospital beds marked as occupied.
+
+**Used In:**
+
+* Resource Utilization
+
+### 9. Available Beds
+
+**Definition:**
+Shows the number of hospital beds marked as available.
+
+**Used In:**
+
+* Resource Utilization
+
+## KPI Summary
+
+| KPI                    | Dashboard                               |
+| ---------------------- | --------------------------------------- |
+| Total Admissions       | Hospital Overview, Department Analytics |
+| Average Length of Stay | Hospital Overview, Department Analytics |
+| Occupancy Rate         | Hospital Overview, Department Analytics |
+| Total Revenue          | Hospital Overview, Department Analytics |
+| Total Discharges       | Patient Flow                            |
+| Long Stay %            | Patient Flow                            |
+| Total Beds             | Resource Utilization                    |
+| Occupied Beds          | Resource Utilization                    |
+| Available Beds         | Resource Utilization                    |
 
 ## Conclusion
 
-The final Power BI dashboard suite was checked for basic functionality, calculations, interactions, and usability.
+These KPIs provide a quick overview of hospital admissions, patient stay, revenue, patient discharges, and bed utilization. They are presented through Power BI KPI cards and supported by interactive charts, filters, and slicers.
