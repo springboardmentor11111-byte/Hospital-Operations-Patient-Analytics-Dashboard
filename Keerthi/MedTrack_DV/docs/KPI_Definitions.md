@@ -131,32 +131,7 @@ Purpose
 
 The category is used in the Patient Flow and Department Analytics dashboards to understand patient stay patterns.
 
-KPI Summary
-KPI	Purpose	Dashboard
-Total Admissions	Measures unique hospital admissions	Hospital Overview, Department Analytics
-Average Length of Stay	Measures average patient stay duration	Hospital Overview, Department Analytics
-Occupancy Rate	Measures hospital bed utilization	Hospital Overview, Department Analytics
-Total Revenue	Measures total recorded billing revenue	Hospital Overview, Department Analytics
-Total Discharges	Measures recorded patient discharges	Patient Flow
-Long Stay %	Measures percentage of long-stay patients	Patient Flow
-Total Beds	Measures total bed capacity	Resource Utilization
-Occupied Beds	Measures occupied beds	Resource Utilization
-Available Beds	Measures available beds	Resource Utilization
-DAX Measures Used
-Total Admissions
-Total Admissions =
-DISTINCTCOUNT(Hospital[Admission_ID])
-Total Revenue
-Total Revenue =
-SUM(Hospital[Total])
-Total Discharges
-Total Discharges =
-COUNT(Hospital[Discharge_Date])
-Purpose of KPIs
 
-The KPIs provide a quick summary of important hospital metrics and allow users to monitor:
-
-Patient admissions
 Patient discharges
 Patient stay duration
 Hospital occupancy
